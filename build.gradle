@@ -18,6 +18,17 @@ buildscript {
         // https://stackoverflow.com/questions/74258160/is-jcenter-down-permanently-31-oct
         //jcenter()
     }
+
+    plugins {
+  id "org.sonarqube" version "4.2.1.3168"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "ProjectTugasTrenPRPLD"
+    property "sonar.projectName", "ProjectTugasTrenPRPLD"
+  }
+}
     dependencies {
         classpath 'com.android.tools.build:gradle:' + androidGradleVersion
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:' + kotlinVersion
